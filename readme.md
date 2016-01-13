@@ -6,7 +6,7 @@ Builds a docker image for gocd server based in rancher-base
 To build:
 
 ```
-docker build -t <registry>/jvm8-goserver:<version> .
+docker build -t <registry>/rancher-goserver:<version> .
 ```
 
 To deploy:
@@ -18,7 +18,7 @@ docker run -td --name go-server \
 -e DEPLOY_ENV=dev \
 -h go-server.${DNS_DOMAIN} \
 -v <work-volume> /opt/go-server/work
-<registry>/jvm8-goserver:<version>
+<registry>/rancher-goserver:<version>
 
 DEPLOY_ENV -> Deploy environment
 ```
