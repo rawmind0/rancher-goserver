@@ -12,7 +12,7 @@ ENV GOCD_RELEASE_ARCHIVE ${GOCD_RELEASE}-${GOCD_REVISION}.zip
 
 # Install and configure gocd
 RUN mkdir /var/log/go-server /var/run/go-server \
-  && cd /opt && curl -sSL ${GOCD_REPO}/${GOCD_RELEASE_ARCHIVE} && gunzip ${GOCD_RELEASE_ARCHIVE} | rm ${GOCD_RELEASE_ARCHIVE} \
+  && cd /opt && curl -sSL ${GOCD_REPO}/${GOCD_RELEASE_ARCHIVE} -O && gunzip ${GOCD_RELEASE_ARCHIVE} && rm ${GOCD_RELEASE_ARCHIVE} \
   && ln -s /opt/${GOCD_RELEASE} ${GOCD_HOME} \
   && chmod 774 ${GOCD_HOME}/*.sh
   && mkdir -p ${GOCD_HOME}/work
