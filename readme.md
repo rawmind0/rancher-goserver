@@ -15,12 +15,10 @@ Gocd server: Starts gocd server and configures it
 
 ```
 docker run -td --name go-server \
--e DEPLOY_ENV=dev \
 -h go-server.${DNS_DOMAIN} \
 -v <work-volume> /opt/go-server/work
 <registry>/rancher-goserver:<version>
 
-DEPLOY_ENV -> Deploy environment
 ```
 
 To config:
