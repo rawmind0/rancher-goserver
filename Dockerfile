@@ -7,7 +7,8 @@ ENV GOCD_REPO=https://download.go.cd/gocd/ \
   GOCD_REVISION=2777 \
   GOCD_HOME=/opt/go-server \
   PATH=$GOCD_HOME:$PATH
-ENV GOCD_RELEASE_ARCHIVE ${GOCD_RELEASE}-${GOCD_REVISION}.zip
+ENV GOCD_RELEASE_ARCHIVE=${GOCD_RELEASE}-${GOCD_REVISION}.zip \
+  SERVER_WORK_DIR=${GOCD_HOME}/work
 
 
 # Install and configure gocd
