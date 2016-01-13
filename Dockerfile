@@ -19,4 +19,4 @@ RUN mkdir /var/log/go-server /var/run/go-server \
 
 WORKDIR ${GOCD_HOME}
 
-ENTRYPOINT ["${GOCD_HOME}/server.sh"]
+ENTRYPOINT ["/opt/go-server/server.sh"]
