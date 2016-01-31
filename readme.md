@@ -9,21 +9,21 @@ To build:
 docker build -t <registry>/rancher-goserver:<version> .
 ```
 
-To deploy:
+To run:
 
 Gocd server: Starts gocd server and configures it
 
 ```
 docker run -td --name go-server \
--h go-server.${DNS_DOMAIN} \
 -v <work-volume> /opt/go-server/work
 <registry>/rancher-goserver:<version>
 
 ```
 
-To config:
+# How it works
 
-Change and add these env variables to the docker deploy.
+* The docker has the entrypoint /usr/bin/start.sh, that runs go-server.
+* Config .arams could be modified overriding these env variables:
 
 ```
 SERVER_MEM="512m"
