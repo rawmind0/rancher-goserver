@@ -1,4 +1,4 @@
-FROM rawmind/rancher-jvm8:0.0.1
+FROM rawmind/rancher-jvm8:0.0.2
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 # Set environment
