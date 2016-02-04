@@ -3,13 +3,12 @@ MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 # Set environment
 ENV GOCD_REPO=https://download.go.cd/gocd/ \
-  GOCD_RELEASE=go-server-15.3.1 \
-  GOCD_REVISION=2777 \
+  GOCD_RELEASE=go-server-16.1.0 \
+  GOCD_REVISION=2855 \
   GOCD_HOME=/opt/go-server \
   PATH=$GOCD_HOME:$PATH
 ENV GOCD_RELEASE_ARCHIVE=${GOCD_RELEASE}-${GOCD_REVISION}.zip \
   SERVER_WORK_DIR=${GOCD_HOME}/work
-
 
 # Install and configure gocd
 RUN apk add --update git && rm -rf /var/cache/apk/* \
