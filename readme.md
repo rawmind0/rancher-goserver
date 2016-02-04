@@ -23,7 +23,7 @@ docker run -td --name go-server \
 # How it works
 
 * The docker has the entrypoint /usr/bin/start.sh, that runs go-server.
-* Config .arams could be modified overriding these env variables:
+* Config params could be modified overriding these env variables:
 
 ```
 SERVER_MEM="512m"
