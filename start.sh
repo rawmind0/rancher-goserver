@@ -27,12 +27,14 @@ function checkrancher {
 function saveconfig {
     log "Saving config into ${SERVER_WORK_DIR} directory..."
     
-    if [ ! -d "${SERVER_WORK_DIR}/config" ]; then
-        mkdir -p ${SERVER_WORK_DIR}/config
+    if [ ! -e "${SERVER_WORK_DIR}/config" ]; then
+        mkdir ${SERVER_WORK_DIR}/config
     fi
 
-    if [ -d "${GOCD_HOME}/config" ]; then
-        if [ ! -L "$LINK_OR_DIR" ]; then
+    if [ ! -e "${GOCD_HOME}/config" ]; then
+        ln -s ${SERVER_WORK_DIR}/config ${GOCD_HOME}/config
+    else
+        if [ ! -L "${GOCD_HOME}/config" ]; then
             rm -rf ${GOCD_HOME}/config
             ln -s ${SERVER_WORK_DIR}/config ${GOCD_HOME}/config
         fi
