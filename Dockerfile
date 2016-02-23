@@ -9,7 +9,7 @@ ENV GOCD_VERSION=16.2.1 \
   PATH=$GOCD_HOME:$PATH
 ENV GOCD_REPO=https://download.go.cd/binaries/${GOCD_VERSION}-${GOCD_REVISION}/generic \
   GOCD_RELEASE_ARCHIVE=${GOCD_RELEASE}-${GOCD_VERSION}-${GOCD_REVISION}.zip \
-  SERVER_WORK_DIR=${GOCD_HOME}/work
+  SERVER_WORK_DIR=${GOCD_HOME}/work \
   GOCD_USER_FILE=${SERVER_WORK_DIR}/users.htpasswd
 
 # Install and configure gocd
